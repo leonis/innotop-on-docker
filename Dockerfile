@@ -8,13 +8,13 @@ RUN yum -y update \
 
 WORKDIR /var
 
-RUN wget https://github.com/innotop/innotop/archive/v1.11.1.tar.gz \
-  && tar xvzf v1.11.1.tar.gz \
-  && cd ./innotop-1.11.1 \
+RUN wget https://github.com/innotop/innotop/archive/v1.11.4.tar.gz \
+  && tar xvzf v1.11.4.tar.gz \
+  && cd ./innotop-1.11.4 \
   && perl Makefile.PL \
   && make install \
   && cd ../ \
-  && rm -rf ./innotop-1.11.1 ./v1.11.1.tar.gz
+  && rm -rf ./innotop-1.11.4 ./v1.11.4.tar.gz
 
 ENTRYPOINT ["/usr/local/bin/innotop"]
 
